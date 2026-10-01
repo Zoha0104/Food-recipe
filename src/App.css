@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.navbar {
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar h1 {
+  font-size: 28px;
+}
+
+.search-container {
+  width: 100%;
+  padding: 25px 50px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.search-container form {
+  display: flex;
+  width: 600px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 13px 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 7px 0 0 7px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-container input:focus {
+  border-color: #555;
+}
+
+.search-container button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 0 7px 7px 0;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.search-container button:hover {
+  background-color: #444;
+}
+
+.outer-container {
+  width: 100%;
+  padding: 30px 50px;
+}
+
+.inner-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 30px;
+  align-items: start;
+}
+
+.food-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.food-card {
+  width: 100%;
+  min-height: 140px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.food-image {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.food-info {
+  padding: 15px 20px;
+  flex: 1;
+}
+
+.food-title {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.recipe-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.recipe-button:hover {
+  background-color: #444;
+}
+
+.recipe-details {
+  width: 100%;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-detail-image {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.recipe-details h1 {
+  font-size: 30px;
+  margin: 20px 0 15px;
+}
+
+.recipe-details h2 {
+  font-size: 22px;
+  margin: 25px 0 15px;
+}
+
+.recipe-info {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.recipe-info p {
+  font-size: 15px;
+  color: #555;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ingredient {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.ingredient img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.ingredient h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.ingredient p {
+  color: #666;
+  font-size: 14px;
+}
+
+.instructions {
+  line-height: 1.7;
+  color: #444;
+}
+
+.instructions p {
+  margin-bottom: 10px;
+}
+
+.no-results {
+  font-size: 20px;
+  padding: 30px;
+  color: #555;
+}
+
+@media (max-width: 900px) {
+  .inner-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar h1 {
+    font-size: 23px;
+  }
+
+  .search-container {
+    padding: 20px;
+  }
+
+  .search-container form {
+    width: 100%;
+  }
+
+  .outer-container {
+    padding: 20px;
+  }
+
+  .food-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .food-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .recipe-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
